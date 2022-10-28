@@ -1,13 +1,14 @@
 package staticex;
 
-public class Student1 {
-    public static int serialNum = 1000;
+public class Student2 {
+
+    private static int serialNum = 1000;
     public int studentID;
     public String studentName;
     public int grade;
     public String address;
 
-    public Student1() {
+    public Student2() {
         serialNum++;
         studentID = serialNum;
     }
@@ -18,5 +19,14 @@ public class Student1 {
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
+    }
+
+    public static int getSerialNum() {
+        int i = 10;
+        return serialNum;
+    }
+
+    public static void setSerialNum(int serialNum) {
+        Student2.serialNum = serialNum;
     }
 }
